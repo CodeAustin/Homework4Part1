@@ -7,7 +7,7 @@ Inputs are validated via the jQuery Validation Plugin instead of through pure Ja
 validate.js is the file that utilizes the generateTable() function in its submission handling.
 
 ## Website Link
-### https://codeaustin.github.io/PageHW4Part1/
+### https://codeaustin.github.io/Homework4Part1/
 
 ## References
 ### jQuery Validation Plugin: https://jqueryvalidation.org/

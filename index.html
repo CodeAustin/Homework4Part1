@@ -1,0 +1,66 @@
+<!--
+File: index.html
+GUI Assignment: HW4 Part 1 - Valdiation Plugin
+Austin Nguyen, UMass Lowell, austin_nguyen@student.uml.edu
+Copyright (c) 2024. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+
+Updated on November 27, 2024 by Austin Nguyen
+
+This file contains the HTML code for the Multiplication Table Generator.
+Site shows a form for the user to input the range of the table they want to generate.
+a dynamic, scrollable table is then generated left of the form.
+
+Minor additions and updates were made to include jQuery, the jQuery Validation Plugin, the new
+validate.js file, and comments regarding any changes made for Homework 4, but otherwise most of
+the code will be identitcal to Homework 3's index file.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 4: Multiplication Table</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Form container -->
+        <div class="form-container">
+            <h2>Multiplication Table Generator</h2>
+            <h5>Please enter table ranges.</h5>
+            <form id="numberForm">
+                <!-- Input fields for user to enter table ranges -->
+                <div class="form-group">
+                    <label for="minCol">Minimum Column Value:</label>
+                    <input type="number" id="minCol" name="minCol" required>
+                </div>
+                <div class="form-group">
+                    <label for="maxCol">Maximum Column Value:</label>
+                    <input type="number" id="maxCol" name="maxCol" required>
+                </div>
+                <div class="form-group">
+                    <label for="minRow">Minimum Row Value:</label>
+                    <input type="number" id="minRow" name="minRow" required>
+                </div>
+                <div class="form-group">
+                    <label for="maxRow">Maximum Row Value:</label>
+                    <input type="number" id="maxRow" name="maxRow" required>
+                </div>
+                <!-- Button to generate table, changed to submit type to allow for submission handling -->
+                <button type="submit">Generate</button>
+            </form>
+        </div>
+        <div class="container">
+            <!-- Table container, where the table will be generated -->
+            <h1>Dynamic Table</h1>
+            <div id="table-container"></div>
+        </div>
+    </div>
+    <!-- jQuery and Validation plu1gin -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <!-- Script for generating table -->
+    <script src="js/validate.js"></script>
+</body>
+</html>
